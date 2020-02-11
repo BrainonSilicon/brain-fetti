@@ -1,4 +1,18 @@
-# 🚀 Notion React Starter
+# This is a project based off Neurosity's Notion React Starter Project
+
+- The goal was to have a page that would launch confetti (https://www.npmjs.com/package/react-confetti) when user's "calm" level reached a particular threshold. 
+
+- I added the component Confetti, and then subscribed to the calm api from Neurosity. 
+
+
+
+
+
+
+
+## Instructions for the Notion React Starter
+
+### 🚀 Notion React Starter
 
 ![App Screenshot](public/notion-react-starter.png)
 
