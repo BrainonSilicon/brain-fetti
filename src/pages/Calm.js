@@ -2,26 +2,27 @@ import React, { useState, useEffect } from "react";
 import { Nav } from "../components/Nav";
 
 //import the Confetti component here
-import { TheConfetti } from "/Users/sophiabatchelor/Code/Neurosity/brain-fetti/src/components/Confetti/Confetti.js"; //does this need to be Confetti.js?
+import { TheConfetti } from "../components/Confetti/Confetti.js"; //does this need to be Confetti.js?
 
 export function Calm({ user, notion }) {
   const [calm, setCalmScore] = useState();
   const [showConfetti, setShowConfetti] = useState(false);
 
-    useEffect(() => {
-      if (user && notion) { //this might be made redundant by the above
-        notion.calm().subscribe(calm => {
-          const score = Number(calm.probability.toFixed(2));
-          setCalmScore(score);
-          if (score > 0.3) {
-            setShowConfetti(true);
-          } else {
-            setShowConfetti(false);
-          }
-        });
-      }
-    }, [user, notion]);
-  
+  useEffect(() => {
+    if (user && notion) {
+      //this might be made redundant by the above
+      notion.calm().subscribe(calm => {
+        const score = Number(calm.probability.toFixed(2));
+        setCalmScore(score);
+        if (score > 0.3) {
+          setShowConfetti(true);
+        } else {
+          setShowConfetti(false);
+        }
+      });
+    }
+  }, [user, notion]);
+
   //changed this and lifted from notion-ocean
   return (
     <main>
