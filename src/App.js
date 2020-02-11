@@ -1,3 +1,6 @@
+//this is exactly the same as notion-ocean 
+// the edits you want go into Calm etc 
+
 import React, { useState, useEffect } from "react";
 import { Router, navigate } from "@reach/router";
 import { Notion } from "@neurosity/notion";
