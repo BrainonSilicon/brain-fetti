@@ -15,7 +15,7 @@ export function Calm({ user, notion }) {
     const subscription = notion.calm().subscribe(calm => {
       const score = Number(calm.probability.toFixed(2));
       setCalmScore(score);
-      if (score > 0.3) {
+      if (score > 0.2) {
         setShowConfetti(true);
       } else {
         setShowConfetti(false);
